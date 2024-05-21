@@ -25,9 +25,7 @@
             margin-bottom: 20px;
         }
         .photo-container {
-            position: relative;
             margin-bottom: 20px;
-            display: inline-block;
         }
         .photo {
             width: 150px;
@@ -35,42 +33,6 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid orange;
-        }
-        .arrow-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .arrow-button.left {
-            left: -40px;
-        }
-        .arrow-button.right {
-            right: -40px;
-        }
-        .arrow-button::before {
-            content: '';
-            display: block;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .arrow-button.left::before {
-            border-width: 5px 0 5px 10px;
-            border-color: transparent transparent transparent #000;
-        }
-        .arrow-button.right::before {
-            border-width: 5px 10px 5px 0;
-            border-color: transparent #000 transparent transparent;
         }
         .contact {
             max-width: 400px;
@@ -96,25 +58,10 @@
             margin: 10px auto;
         }
     </style>
-    <script>
-        function showHighSchoolPhoto() {
-            document.getElementById('currentPhoto').src = 'high_school_photo.jpg';
-            document.getElementById('leftButton').style.display = 'none';
-            document.getElementById('rightButton').style.display = 'flex';
-        }
-
-        function showCurrentPhoto() {
-            document.getElementById('currentPhoto').src = 'photo.jpg';
-            document.getElementById('leftButton').style.display = 'flex';
-            document.getElementById('rightButton').style.display = 'none';
-        }
-    </script>
 </head>
 <body>
     <div class="photo-container">
-        <div id="leftButton" class="arrow-button left" onclick="showHighSchoolPhoto()"></div>
-        <img id="currentPhoto" src="photo.jpg" alt="张守信的照片" class="photo">
-        <div id="rightButton" class="arrow-button right" style="display: none;" onclick="showCurrentPhoto()"></div>
+        <img src="photo.jpg" alt="张守信的照片" class="photo">
     </div>
     <div class="separator"></div>
     <h1>自我介绍</h1>
@@ -127,7 +74,7 @@
         <h2>联系方式</h2>
         <ul>
             <li>Email: <a href="mailto:1571193735@qq.com">1571193735@qq.com</a></li>
-            <li>GitHub: <a href="https://github.com/shouxinzhang" target="_blank">https://github.com/shouxinzhang</a></li>
+            <li>GitHub: <a href="https://github.com/shouxinzhang" target="_blank">SHOUXINZHANG</a></li>
         </ul>
     </div>
 </body>
