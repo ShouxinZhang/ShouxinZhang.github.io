@@ -95,18 +95,34 @@
             background-color: black;
             margin: 10px auto;
         }
+        .diary-button {
+            display: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
     <script>
         function showHighSchoolPhoto() {
             document.getElementById('currentPhoto').src = 'high_school_photo.jpg';
             document.getElementById('leftButton').style.display = 'none';
             document.getElementById('rightButton').style.display = 'flex';
+            document.getElementById('diaryButton').style.display = 'block';
         }
 
         function showCurrentPhoto() {
             document.getElementById('currentPhoto').src = 'photo.jpg';
             document.getElementById('leftButton').style.display = 'flex';
             document.getElementById('rightButton').style.display = 'none';
+            document.getElementById('diaryButton').style.display = 'none';
+        }
+
+        function showDiary() {
+            window.location.href = 'diary.html';
         }
     </script>
 </head>
@@ -116,6 +132,7 @@
         <img id="currentPhoto" src="photo.jpg" alt="张守信的照片" class="photo">
         <div id="rightButton" class="arrow-button right" style="display: none;" onclick="showCurrentPhoto()"></div>
     </div>
+    <button id="diaryButton" class="diary-button" onclick="showDiary()">我的周记</button>
     <div class="separator"></div>
     <h1>自我介绍</h1>
     <div class="intro">
